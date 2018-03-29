@@ -1,0 +1,25 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0'
+
+        // This example is contrived, but in a real app, this would be
+        // another plugin which transitively depends on guava 23.0
+        classpath 'com.google.guava:guava:23.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
